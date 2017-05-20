@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using CyllianMonoGame.Entities.Characters;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -11,6 +12,8 @@ namespace CyllianMonoGame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Player player;
+        float fps;
 
         public Game1()
         {
@@ -27,6 +30,9 @@ namespace CyllianMonoGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            player = new Player(new Vector2(200, 200), Content.Load<Texture2D>("Actor1"), Vector2.Zero);
+
+            this.fps = 0;
 
             base.Initialize();
         }
@@ -62,8 +68,12 @@ namespace CyllianMonoGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            if (this.fps > 2) {
+                player.Update(gameTime);
+                this.fps = 0;
+            }
 
+            this.fps++;
             base.Update(gameTime);
         }
 
@@ -75,8 +85,12 @@ namespace CyllianMonoGame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
 
+            player.Draw(spriteBatch);
+
+            spriteBatch.End();
+      
             base.Draw(gameTime);
         }
     }
