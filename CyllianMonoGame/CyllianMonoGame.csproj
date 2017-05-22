@@ -41,10 +41,14 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Config\Global.cs" />
     <Compile Include="Entities\Characters\MovingEntity.cs" />
     <Compile Include="Entities\Characters\Player.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Level\Map.cs" />
+    <Compile Include="Level\Tilemap.cs" />
+    <Compile Include="Other\Camera\Camera.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

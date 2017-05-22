@@ -4,8 +4,41 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Projects/C#/CyllianMonoGame/CyllianMonoGame/Content/Actor1.png</File>
-    <File>C:/Projects/C#/CyllianMonoGame/CyllianMonoGame/Content/Actor2.png</File>
-    <File>C:/Projects/C#/CyllianMonoGame/CyllianMonoGame/Content/Actor3.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Characters/Sprite/Actor1.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Characters/Sprite/Actor2.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Characters/Sprite/Actor3.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Dungeon_A1.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Dungeon_A2.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Dungeon_A4.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Dungeon_A5.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Dungeon_B.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Dungeon_C.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Inside_A1.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Inside_A2.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Inside_A4.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Inside_A5.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Inside_B.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Inside_C.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Outside_A1.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Outside_A3.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Outside_A4.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Outside_A5.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Outside_B.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/Outside_C.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/SF_Inside_A4.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/SF_Inside_B.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/SF_Inside_C.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/SF_Outside_A3.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/SF_Outside_A4.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/SF_Outside_A5.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/SF_Outside_B.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/SF_Outside_C.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/World_A1.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/World_A2.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/World_B.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Tiles/World_C.png</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Font/DebugFont.spritefont</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Font/MainFont.spritefont</File>
+    <File>D:/Projects/C#/CyllianMonoGame/CyllianMonoGame/CyllianMonoGame/Content/Font/StatsFont.spritefont</File>
   </SourceFiles>
 </SourceFileCollection>

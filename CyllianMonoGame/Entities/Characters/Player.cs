@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using CyllianMonoGame.Config;
 
 namespace CyllianMonoGame.Entities.Characters
 {
@@ -15,12 +11,16 @@ namespace CyllianMonoGame.Entities.Characters
             : base(position, sprite, velocity)
         {
             InitializeSprite(2, 3, 0, 0);
+            Initialize();
         }
 
 
         public override void Initialize()
         {
             //Set stats or something
+
+            //Set camera
+            Global.Camera.Position = this.Position;
         }
 
         public override void InitializeSprite(int horizontalFrames, int verticalFrames, int horizontalOffset, int verticalOffset)
@@ -58,6 +58,18 @@ namespace CyllianMonoGame.Entities.Characters
 
             //Update movement
             this.Position = this.Position + this.Velocity;
+            //this.Position = this.Position - Global.GlobalPosition;
+
+            //Update bounding box
+            this.BoundingBox = new Rectangle((int)this.Position.X, (int)this.Position.Y, 0, 0);
+
+            //Move camera if player no longer intersects
+            if (!Global.Camera.BoundingBox.Intersects(new Rectangle((int)(this.Position.X - Global.GlobalPosition.X), (int)(this.Position.Y - Global.GlobalPosition.Y),0,0)))
+            {
+                //Update global position
+                Global.GlobalPosition = Global.GlobalPosition + this.Velocity;
+                //Global.Camera.SetPosition(this.Position);
+            }
 
             //Update player sprite
             if (this.Velocity != Vector2.Zero)
@@ -74,7 +86,7 @@ namespace CyllianMonoGame.Entities.Characters
             int spriteSize = 48;
             spriteBatch.Draw(
                 Sprite, 
-                Position, 
+                Position - Global.GlobalPosition, 
                 new Rectangle(CurrentHorizontalFrame * spriteSize, CurrentVerticalFrame * spriteSize, spriteSize, spriteSize), 
                 Color.White, 
                 0f, 

@@ -1,4 +1,5 @@
 ﻿using CyllianMonoGame.Entities.Characters;
+using CyllianMonoGame.Level;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -12,8 +13,11 @@ namespace CyllianMonoGame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Player player;
+        //Player player;
+        Map map;
         float fps;
+
+        public SpriteFont DebugFont { get; set; }
 
         public Game1()
         {
@@ -30,7 +34,15 @@ namespace CyllianMonoGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            player = new Player(new Vector2(200, 200), Content.Load<Texture2D>("Actor1"), Vector2.Zero);
+
+            graphics.PreferredBackBufferHeight = 800;
+            graphics.PreferredBackBufferWidth = 1000;
+            graphics.ApplyChanges();
+
+
+            //player = new Player(new Vector2(200, 200), Content.Load<Texture2D>("Characters//Sprite//Actor1"), Vector2.Zero);
+            map = new Map(this);
+            map.Initialize("testmap");
 
             this.fps = 0;
 
@@ -47,6 +59,7 @@ namespace CyllianMonoGame
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            this.DebugFont = Content.Load<SpriteFont>("Font//DebugFont");
         }
 
         /// <summary>
@@ -69,7 +82,7 @@ namespace CyllianMonoGame
                 Exit();
 
             if (this.fps > 2) {
-                player.Update(gameTime);
+                map.Update(gameTime);
                 this.fps = 0;
             }
 
@@ -87,7 +100,8 @@ namespace CyllianMonoGame
 
             spriteBatch.Begin();
 
-            player.Draw(spriteBatch);
+            //player.Draw(spriteBatch);
+            map.Draw(spriteBatch);
 
             spriteBatch.End();
       

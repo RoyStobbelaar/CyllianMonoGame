@@ -21,6 +21,7 @@ namespace CyllianMonoGame.Entities.Characters
         public int VerticalFramesOffset { get; set; }
         public int CurrentHorizontalFrame { get; set; }
         public int CurrentVerticalFrame { get; set; }
+        public Rectangle BoundingBox { get; set; }
 
         public MovingEntity(Vector2 position, Texture2D sprite, Vector2? velocity)
             : base(position, sprite)
@@ -31,6 +32,8 @@ namespace CyllianMonoGame.Entities.Characters
             else {
                 this.Velocity = Vector2.Zero;
             }
+
+            this.BoundingBox = new Rectangle((int)position.X, (int)Position.Y, 48, 48);
         }
 
         public abstract void InitializeSprite(int horizontalFrames, int verticalFrames, int horizontalOffset, int verticalOffset);
